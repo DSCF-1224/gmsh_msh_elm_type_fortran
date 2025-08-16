@@ -13,6 +13,10 @@ This module requires a Fortran compiler with the following features:
 - ISO C binding (`iso_c_binding` intrinsic module)
   - `c_int` type for C interoperability
 
+## Documentation
+
+Documentation is available at [https://dscf-1224.github.io/gmsh_msh_elm_type_fortran/](https://dscf-1224.github.io/gmsh_msh_elm_type_fortran/).
+
 [GmshReferenceManualTop]: https://gmsh.info/doc/texinfo/gmsh.html
 [GmshReferenceManualMshFileFormat]: https://gmsh.info/doc/texinfo/gmsh.html#MSH-file-format
 [GmshReferenceManualMsh1]: https://gmsh.info/doc/texinfo/gmsh.html#MSH-file-format-version-1-_0028Legacy_0029
