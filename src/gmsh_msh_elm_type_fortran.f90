@@ -20,6 +20,7 @@ module gmsh_msh_elm_type_fortran
 
     public :: export
     public :: initialize
+    public :: read_ascii_file
 
 
 
@@ -56,6 +57,12 @@ module gmsh_msh_elm_type_fortran
     interface initialize
         module procedure :: initialize_gmsh_msh_elm_type
     end interface initialize
+
+    !> Version: experimental
+    !> Read an `elm-type` from a connected formatted unit.
+    interface read_ascii_file
+        module procedure :: read_ascii_file_for_gmsh_msh_elm_type
+    end interface read_ascii_file
 
 
 
@@ -97,6 +104,32 @@ module gmsh_msh_elm_type_fortran
 
     !> Version: experimental
     !> Read an `elm-type` from a connected formatted unit.
+    subroutine read_ascii_file_for_gmsh_msh_elm_type(elm_type, unit, iostat, iomsg)
+
+        class(gmsh_msh_elm_type), intent(inout) :: elm_type
+
+        integer, intent(in) :: unit
+
+        integer, intent(out) :: iostat
+
+        character(*), intent(inout) :: iomsg
+
+
+
+        read( &!
+        unit   = unit     , &!
+        fmt    = *        , &!
+        iostat = iostat   , &!
+        iomsg  = iomsg(:)   &!
+        ) &!
+        elm_type%expression
+
+    end subroutine read_ascii_file_for_gmsh_msh_elm_type
+
+
+
+    !> Version: experimental
+    !> Read an `elm-type` from a connected formatted unit.
     subroutine read_formatted(elm_type, unit, iotype, v_list, iostat, iomsg)
 
         class(gmsh_msh_elm_type), intent(inout) :: elm_type
@@ -129,13 +162,12 @@ module gmsh_msh_elm_type_fortran
 
             case("LISTDIRECTED")
 
-                read( &!
-                unit   = unit     , &!
-                fmt    = *        , &!
-                iostat = iostat   , &!
-                iomsg  = iomsg(:)   &!
-                ) &!
-                elm_type%expression
+                call read_ascii_file( &!
+                elm_type = elm_type , &!
+                unit     = unit     , &!
+                iostat   = iostat   , &!
+                iomsg    = iomsg      &!
+                )
 
             case default
 

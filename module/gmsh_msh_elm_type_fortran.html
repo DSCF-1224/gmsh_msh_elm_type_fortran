@@ -89,7 +89,7 @@
 
             <li class="list-inline-item" id="statements"><i class="fa fa-list-ol"></i>
               <a data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-html="true"
-                 title="100.0% of total for modules and submodules.">58 statements</a>
+                 title="100.0% of total for modules and submodules.">69 statements</a>
             </li>
 
             <li class="list-inline-item" id="source-file">
@@ -141,6 +141,7 @@
             <a class="list-group-item" href="../module/gmsh_msh_elm_type_fortran.html#interface-initialize">initialize</a>
             <a class="list-group-item" href="../module/gmsh_msh_elm_type_fortran.html#interface-operator%28.eq.%29">operator(.eq.)</a>
             <a class="list-group-item" href="../module/gmsh_msh_elm_type_fortran.html#interface-read%28formatted%29">read(formatted)</a>
+            <a class="list-group-item" href="../module/gmsh_msh_elm_type_fortran.html#interface-read_ascii_file">read_ascii_file</a>
         </div>
       </div>
     </div>
@@ -179,6 +180,7 @@
       <div id="subs-0" class="collapse">
         <div class="list-group list-group-flush">
             <a class="list-group-item" href="../module/gmsh_msh_elm_type_fortran.html#proc-initialize_gmsh_msh_elm_type">initialize_gmsh_msh_elm_type</a>
+            <a class="list-group-item" href="../module/gmsh_msh_elm_type_fortran.html#proc-read_ascii_file_for_gmsh_msh_elm_type">read_ascii_file_for_gmsh_msh_elm_type</a>
             <a class="list-group-item" href="../module/gmsh_msh_elm_type_fortran.html#proc-read_formatted">read_formatted</a>
         </div>
       </div>
@@ -422,7 +424,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-elm_type~3"></span>
+              <span class="anchor" id="variable-elm_type~4"></span>
               type(<a href='../type/gmsh_msh_elm_type.html'>gmsh_msh_elm_type</a>),
             </td>
 <td>intent(out)</td>
@@ -554,7 +556,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-elm_type~2"></span>
+              <span class="anchor" id="variable-elm_type~3"></span>
               class(<a href='../type/gmsh_msh_elm_type.html'>gmsh_msh_elm_type</a>),
             </td>
 <td>intent(inout)</td>
@@ -569,7 +571,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-unit"></span>
+              <span class="anchor" id="variable-unit~2"></span>
               integer,
             </td>
 <td>intent(in)</td>
@@ -608,6 +610,107 @@ modules which it uses.
             </td>
             <td>::</td>
             <td><strong>v_list</strong>(:)</td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-iostat~2"></span>
+              integer,
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>iostat</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-iomsg~2"></span>
+              character(len=*),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>iomsg</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+          </li>
+    </ul>
+  </div>
+
+              <div class="card">
+    <div class="card-header bg-light codesum">
+      <span class="anchor" id="interface-read_ascii_file"></span>
+      <h3>public        interface <a href='../interface/read_ascii_file.html'>read_ascii_file</a> 
+      </h3>
+    </div>
+      <div class="card-body">
+        <p>Read an <code>elm-type</code> from a connected formatted unit.</p>
+      </div>
+    <ul class="list-group">
+          <li class="list-group-item">
+                <h3>
+    private  subroutine <a href='../proc/read_ascii_file_for_gmsh_msh_elm_type.html'>read_ascii_file_for_gmsh_msh_elm_type</a>(elm_type, unit, iostat, iomsg)  
+
+    </h3>
+        <dl class="dl-horizontal">
+        <dt>License</dt><dd><a rel="license" href="https://opensource.org/licenses/MIT">MIT</a></dd>
+        <dt>Version</dt><dd>experimental</dd>
+    </dl>
+
+  <p>Read an <code>elm-type</code> from a connected formatted unit.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-elm_type~2"></span>
+              class(<a href='../type/gmsh_msh_elm_type.html'>gmsh_msh_elm_type</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>elm_type</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-unit"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>unit</strong></td>
             <td>
 
             </td>
@@ -852,7 +955,7 @@ modules which it uses.
     <tbody>
         <tr>
             <td>
-              <span class="anchor" id="variable-elm_type~3"></span>
+              <span class="anchor" id="variable-elm_type~4"></span>
               type(<a href='../type/gmsh_msh_elm_type.html'>gmsh_msh_elm_type</a>),
             </td>
 <td>intent(out)</td>
@@ -873,7 +976,7 @@ modules which it uses.
   </div>
 
               <div class="card">
-    <div class="card-header codesum"><span class="anchor" id="proc-read_formatted"></span> <h3>private  subroutine <a href='../proc/read_formatted.html'>read_formatted</a>(elm_type, unit, iotype, v_list, iostat, iomsg)  
+    <div class="card-header codesum"><span class="anchor" id="proc-read_ascii_file_for_gmsh_msh_elm_type"></span> <h3>private  subroutine <a href='../proc/read_ascii_file_for_gmsh_msh_elm_type.html'>read_ascii_file_for_gmsh_msh_elm_type</a>(elm_type, unit, iostat, iomsg)  
 </h3></div>
     <div class="card-body">
               <dl class="dl-horizontal">
@@ -926,6 +1029,95 @@ modules which it uses.
         </tr>
         <tr>
             <td>
+              <span class="anchor" id="variable-iostat"></span>
+              integer,
+            </td>
+<td>intent(out)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>iostat</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-iomsg"></span>
+              character(len=*),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>iomsg</strong></td>
+            <td>
+
+            </td>
+        </tr>
+    </tbody>
+  </table>
+
+
+    </div>
+  </div>
+
+              <div class="card">
+    <div class="card-header codesum"><span class="anchor" id="proc-read_formatted"></span> <h3>private  subroutine <a href='../proc/read_formatted.html'>read_formatted</a>(elm_type, unit, iotype, v_list, iostat, iomsg)  
+</h3></div>
+    <div class="card-body">
+              <dl class="dl-horizontal">
+        <dt>License</dt><dd><a rel="license" href="https://opensource.org/licenses/MIT">MIT</a></dd>
+        <dt>Version</dt><dd>experimental</dd>
+    </dl>
+
+  <p>Read an <code>elm-type</code> from a connected formatted unit.</p>
+
+  <h4>Arguments</h4>
+      <table class="table table-striped varlist">
+    <thead>
+      <tr>
+        <th scope="col">Type</th>
+<th scope="col">Intent</th><th scope="col">Optional</th>        <th scope="col">Attributes</th>
+        <th scope="col"></th>
+        <th scope="col">Name</th>
+        <th scope="col"></th>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-elm_type~3"></span>
+              class(<a href='../type/gmsh_msh_elm_type.html'>gmsh_msh_elm_type</a>),
+            </td>
+<td>intent(inout)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>elm_type</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+              <span class="anchor" id="variable-unit~2"></span>
+              integer,
+            </td>
+<td>intent(in)</td>
+              <td></td>            <td>
+              
+            </td>
+            <td>::</td>
+            <td><strong>unit</strong></td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
               <span class="anchor" id="variable-iotype"></span>
               character(len=*),
             </td>
@@ -956,7 +1148,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-iostat"></span>
+              <span class="anchor" id="variable-iostat~2"></span>
               integer,
             </td>
 <td>intent(out)</td>
@@ -971,7 +1163,7 @@ modules which it uses.
         </tr>
         <tr>
             <td>
-              <span class="anchor" id="variable-iomsg"></span>
+              <span class="anchor" id="variable-iomsg~2"></span>
               character(len=*),
             </td>
 <td>intent(inout)</td>
@@ -1014,7 +1206,7 @@ modules which it uses.
             <p class="text-end">
               Documentation generated by
               <a href="https://github.com/Fortran-FOSS-Programmers/ford">FORD</a>
- on 2025-08-17 00:37 +0000             </p>
+ on 2025-09-04 13:06 +0000             </p>
           </div>
         </div>
         <br>
